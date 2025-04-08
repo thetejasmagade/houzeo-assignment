@@ -234,7 +234,7 @@ const handleEmailInput = (index: number, value: string) => {
                 type="email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="example@mail.com"
-                @input="handleEmailInput(index, $event.target.value)"
+                @input="handleEmailInput(index, ($event.target as HTMLInputElement).value)"
               />
               <div
                 v-if="formErrors.groupFields[index].email.length"
@@ -255,7 +255,7 @@ const handleEmailInput = (index: number, value: string) => {
                 type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="(844) 448-0110"
-                @input="handleMobileInput(index, $event.target.value)"
+                @input="handleMobileInput(index, ($event.target as HTMLInputElement).value)"
               />
             </div>
 
